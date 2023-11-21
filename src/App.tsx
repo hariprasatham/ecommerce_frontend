@@ -1,9 +1,15 @@
 import React from 'react'
-import { Button } from './components/ui/button'
+import Navbar from './components/custom/Navbar/Navbar'
+import Banner from './components/custom/Banner/Banner'
+import Collection from './components/Collection/Collection'
 
 const App = () => {
   return (
-    <div><Button>Hello</Button></div>
+    <main>
+      <Navbar />
+      <Banner />
+      <Collection collection_name='{Mens Collection}'/>
+    </main>
   )
 }
 
