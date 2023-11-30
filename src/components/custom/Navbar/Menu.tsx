@@ -12,8 +12,10 @@ import {
 } from "@/components/ui/navigation-menu";
 
 import { navListItemsMens, navListItemsWomens } from "@/lib/misc";
+import { useNavigate } from "react-router-dom";
 
 export function Menu() {
+  const navigate = useNavigate();
   return (
     <NavigationMenu className="hidden md:flex">
       <NavigationMenuList>
@@ -51,7 +53,10 @@ export function Menu() {
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
-        <NavigationMenuItem className="text-lg">
+        <NavigationMenuItem
+          className="text-lg cursor-pointer"
+          onClick={() => navigate("/kids")}
+        >
           <NavigationMenuLink className={navigationMenuTriggerStyle()}>
             Kids
           </NavigationMenuLink>

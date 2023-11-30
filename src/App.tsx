@@ -1,16 +1,25 @@
-import React from 'react'
-import Navbar from './components/custom/Navbar/Navbar'
-import Banner from './components/custom/Banner/Banner'
-import Collection from './components/Collection/Collection'
+import Banner from "./components/custom/Banner/Banner";
+import Collection from "./components/custom/Collection/Collection";
+import { mensCollections, womenCollections, kidsCollections } from "@/lib/misc";
 
 const App = () => {
   return (
     <main>
-      <Navbar />
       <Banner />
-      <Collection collection_name='{Mens Collection}'/>
+      <Collection
+        collection_name="Mens Collection"
+        collectionItems={mensCollections}
+      />
+      <Collection
+        collection_name="Women Collection"
+        collectionItems={womenCollections}
+      />
+      <Collection
+        collection_name="Kids Collection"
+        collectionItems={kidsCollections}
+      />
     </main>
-  )
-}
+  );
+};
 
-export default App
+export default App;
